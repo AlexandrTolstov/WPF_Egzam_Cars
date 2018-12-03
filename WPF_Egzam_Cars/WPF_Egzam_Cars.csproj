@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,10 +71,50 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAL\MCS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MCS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MCS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\newEquipment.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sp_helpdiagrams_Result.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagrams.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TablesLocation.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TablesManufacturer.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TablesModel.cs">
+      <DependentUpon>MCS.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resource\ButtonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -85,6 +134,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="DAL\MCS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MCS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\MCS.edmx.diagram">
+      <DependentUpon>MCS.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +149,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\MCS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MCS.Context.cs</LastGenOutput>
+      <DependentUpon>MCS.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\MCS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MCS.edmx</DependentUpon>
+      <LastGenOutput>MCS.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

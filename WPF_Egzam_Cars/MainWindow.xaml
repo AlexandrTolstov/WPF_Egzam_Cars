@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Egzam_Cars"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="750" Width="1300">
+    <!--Определения стилей для кнопок-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resource/ButtonMenu.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    
+    <DockPanel>
+        <Grid DockPanel.Dock="Top"
+              Height="50"
+              ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                 <ColumnDefinition Width="*"></ColumnDefinition>
+                 <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Background="Black"></Label>
+            <ComboBox Grid.Column="1" 
+                      Background="Black"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Width="100"
+                      Height="50"
+                      FontSize="16">
+                <ComboBoxItem IsSelected="True">Русский</ComboBoxItem>
+                <ComboBoxItem>English</ComboBoxItem>
+            </ComboBox>
+        </Grid>
         
-    </Grid>
+        <StackPanel DockPanel.Dock="Left" 
+                    Width="250"
+                    Orientation="Vertical">
+            <Button x:Name="ButtonGlav" Style="{StaticResource darkButtonStyle}">Главная</Button>
+            <Button x:Name="ButtonOtlRab" Style="{StaticResource darkButtonStyle}">Отложенные работы</Button>
+            <Button x:Name="ButtonVipRab" Style="{StaticResource darkButtonStyle}">Выполненные работы</Button>
+            <Button x:Name="ButtonAgreg" Style="{StaticResource darkButtonStyle}">Агрегаты</Button>
+            <Button x:Name="ButtonMotochas" Style="{StaticResource darkButtonStyle}">Моточасы</Button>
+            <Button x:Name="ButtonRashMat" Style="{StaticResource darkButtonStyle}">Расходные материалы</Button>
+            <Button x:Name="ButtonPlanir" Style="{StaticResource darkButtonStyle}">Планирование</Button>
+            <Button x:Name="ButtonProect" Style="{StaticResource darkButtonStyle}">Проект</Button>
+            <Button x:Name="ButtonSpisMash" Style="{StaticResource darkButtonStyle}">Список машин</Button>
+            <Button x:Name="ButtonSpravoch" Style="{StaticResource darkButtonStyle}">Справочник</Button>
+            <Button x:Name="ButtonDostup" Style="{StaticResource darkButtonStyle}">Доступы</Button>
+            <Button x:Name="ButtonCheck" Style="{StaticResource darkButtonStyle}">Checklist</Button>
+            <Button x:Name="ButtonOtchet" Style="{StaticResource darkButtonStyle}">Отчеты</Button>
+        </StackPanel>
+        <Grid></Grid>
+    </DockPanel>
 </Window>
