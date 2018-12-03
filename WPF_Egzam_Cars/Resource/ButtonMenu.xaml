@@ -10,52 +10,67 @@
     
     <Style x:Key="darkButtonStyle"
         TargetType="{x:Type Button}">
+
+        <!--Сеттеры свойств-->
         <Setter Property="Background" Value="#1C1C1C"/>
         <Setter Property="BorderBrush" Value="DarkGray"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+        <Setter Property="FontSize" Value="15"/>
+        <!--<Setter Property="FontWeight" Value="Bold"/>-->
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Padding" Value="5"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
 
+        <!--Сеттер шаблона-->
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
+                        <!--Разметка сетки для кнопки-->
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="40"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="20"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
+                        <!--Граница размещенная в первый столбец-->
                         <Border Grid.Column="0" Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Height="45"/>
+                        <!--Граница размещенная во второй столбец-->
                         <Border Grid.Column="1" Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Height="45"/>
-                        
+
+                        <!--Текст кнопки размещенный во второй столбец
+                        Content="{TemplateBinding Content}" - определяет содержимое, 
+                        которое берется из содержимого кнопки -->
                         <DockPanel Grid.Column="1"
                                    VerticalAlignment="Center"
                                    Margin="5">
                             <ContentPresenter Content="{TemplateBinding Content}"
                                               TextBlock.TextAlignment="Left"></ContentPresenter>
                         </DockPanel>
-                        
+
+                        <!--Граница размещенная в третьем столбец-->
                         <Border Grid.Column="2" Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Height="45"/>
                     </Grid>
-                    
+
+                    <!--Тригеры-->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#FFBF00"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Setter Property="FontSize" Value="17"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" Value="#FF8000"/>
+                            <Setter Property="FontSize" Value="15"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

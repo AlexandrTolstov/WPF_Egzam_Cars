@@ -15,8 +15,8 @@
         </ResourceDictionary>
     </Window.Resources>
     
-    
     <DockPanel>
+        <!--Верхнее меню-->
         <Grid DockPanel.Dock="Top"
               Height="50"
               ShowGridLines="True">
@@ -36,7 +36,8 @@
                 <ComboBoxItem>English</ComboBoxItem>
             </ComboBox>
         </Grid>
-        
+
+        <!--Левое меню-->
         <StackPanel DockPanel.Dock="Left" 
                     Width="250"
                     Orientation="Vertical">
@@ -54,6 +55,8 @@
             <Button x:Name="ButtonCheck" Style="{StaticResource darkButtonStyle}">Checklist</Button>
             <Button x:Name="ButtonOtchet" Style="{StaticResource darkButtonStyle}">Отчеты</Button>
         </StackPanel>
+
+        <!--Центральная часть-->
         <Grid></Grid>
     </DockPanel>
 </Window>
