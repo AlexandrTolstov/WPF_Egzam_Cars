@@ -18,11 +18,44 @@ namespace WPF_Egzam_Cars
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    public static class ColorsMenu
+    {
+        public static SolidColorBrush YellowColor = new SolidColorBrush(Color.FromRgb(251, 187, 0));
+        public static SolidColorBrush GrayColor = new SolidColorBrush(Color.FromRgb(61, 61, 61));
+        public static SolidColorBrush OrangeColor = new SolidColorBrush(Color.FromRgb(255, 128, 0));
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonGlav_MouseEnter(object sender, MouseEventArgs e)
+        {
+            BorderHome.Background = ColorsMenu.YellowColor;
+            BorderHome1.Background = ColorsMenu.YellowColor;
+            ImageHome.Source = new BitmapImage(new Uri(@"Menu_png\i.png", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ButtonGlav_MouseLeave(object sender, MouseEventArgs e)
+        {
+            BorderHome.Background = ColorsMenu.GrayColor;
+            BorderHome1.Background = ColorsMenu.GrayColor;
+            ImageHome.Source = new BitmapImage(new Uri(@"Menu_png\Home.png", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ButtonGlav_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var BorderColor = new SolidColorBrush(Color.FromRgb(255, 128, 0)); //Orange
+            BorderHome.Background = ColorsMenu.OrangeColor;
+            BorderHome1.Background = ColorsMenu.OrangeColor;
+        }
+
+        private void ButtonGlav_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            BorderHome.Background = ColorsMenu.YellowColor;
+            BorderHome1.Background = ColorsMenu.YellowColor;
         }
     }
 }

@@ -111,6 +111,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resource\BorderMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resource\ButtonMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +165,8 @@
       <DependentUpon>MCS.edmx</DependentUpon>
       <LastGenOutput>MCS.cs</LastGenOutput>
     </Content>
+    <Resource Include="Menu_png\Home.png" />
+    <Resource Include="Menu_png\i.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

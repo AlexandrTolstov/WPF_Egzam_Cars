@@ -12,7 +12,7 @@
         TargetType="{x:Type Button}">
 
         <!--Сеттеры свойств-->
-        <Setter Property="Background" Value="#1C1C1C"/>
+        <Setter Property="Background" Value="#3d3d3d"/>
         <Setter Property="BorderBrush" Value="DarkGray"/>
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
         <Setter Property="FontSize" Value="15"/>
@@ -28,9 +28,7 @@
                     <Grid>
                         <!--Разметка сетки для кнопки-->
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="20"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
                         <!--Граница размещенная в первый столбец-->
@@ -38,27 +36,16 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Height="45"/>
-                        <!--Граница размещенная во второй столбец-->
-                        <Border Grid.Column="1" Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            Height="45"/>
 
-                        <!--Текст кнопки размещенный во второй столбец
+                        <!--Текст кнопки размещенный в первый столбец
                         Content="{TemplateBinding Content}" - определяет содержимое, 
                         которое берется из содержимого кнопки -->
-                        <DockPanel Grid.Column="1"
+                        <DockPanel Grid.Column="0"
                                    VerticalAlignment="Center"
                                    Margin="5">
                             <ContentPresenter Content="{TemplateBinding Content}"
                                               TextBlock.TextAlignment="Left"></ContentPresenter>
                         </DockPanel>
-
-                        <!--Граница размещенная в третьем столбец-->
-                        <Border Grid.Column="2" Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            Height="45"/>
                     </Grid>
 
                     <!--Тригеры-->

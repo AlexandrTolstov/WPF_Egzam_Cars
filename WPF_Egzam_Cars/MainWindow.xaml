@@ -11,10 +11,11 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource/ButtonMenu.xaml"/>
+                <ResourceDictionary Source="/Resource/BorderMenu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
+
     <DockPanel>
         <!--Верхнее меню-->
         <Grid DockPanel.Dock="Top"
@@ -41,7 +42,29 @@
         <StackPanel DockPanel.Dock="Left" 
                     Width="250"
                     Orientation="Vertical">
-            <Button x:Name="ButtonGlav" Style="{StaticResource darkButtonStyle}">Главная</Button>
+
+            <!--Кнопка Главная-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="BorderHome" Grid.Column="0" Style="{StaticResource darkBorderStyle}"></Border>
+                <Image x:Name="ImageHome" Grid.Column="0" 
+                       Source="Menu_png\Home.png"
+                       Width="20"
+                       Height="20"
+                       ></Image>
+                <Button Grid.Column="1" x:Name="ButtonGlav" Style="{StaticResource darkButtonStyle}" 
+                        MouseEnter="ButtonGlav_MouseEnter"
+                        MouseLeave="ButtonGlav_MouseLeave"
+                        PreviewMouseLeftButtonDown="ButtonGlav_PreviewMouseLeftButtonDown"
+                        PreviewMouseLeftButtonUp="ButtonGlav_PreviewMouseLeftButtonUp">Главная</Button>
+                <Border x:Name="BorderHome1" Grid.Column="2" Style="{StaticResource darkBorderStyle}"></Border>
+            </Grid>
+            
+            
             <Button x:Name="ButtonOtlRab" Style="{StaticResource darkButtonStyle}">Отложенные работы</Button>
             <Button x:Name="ButtonVipRab" Style="{StaticResource darkButtonStyle}">Выполненные работы</Button>
             <Button x:Name="ButtonAgreg" Style="{StaticResource darkButtonStyle}">Агрегаты</Button>
