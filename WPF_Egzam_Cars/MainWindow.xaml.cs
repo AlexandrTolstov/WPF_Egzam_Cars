@@ -31,31 +31,29 @@ namespace WPF_Egzam_Cars
             InitializeComponent();
         }
 
+        #region События кнопки Главное
         private void ButtonGlav_MouseEnter(object sender, MouseEventArgs e)
         {
             BorderHome.Background = ColorsMenu.YellowColor;
             BorderHome1.Background = ColorsMenu.YellowColor;
             ImageHome.Source = new BitmapImage(new Uri(@"Menu_png\i.png", UriKind.RelativeOrAbsolute));
         }
-
         private void ButtonGlav_MouseLeave(object sender, MouseEventArgs e)
         {
             BorderHome.Background = ColorsMenu.GrayColor;
             BorderHome1.Background = ColorsMenu.GrayColor;
             ImageHome.Source = new BitmapImage(new Uri(@"Menu_png\Home.png", UriKind.RelativeOrAbsolute));
         }
-
         private void ButtonGlav_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var BorderColor = new SolidColorBrush(Color.FromRgb(255, 128, 0)); //Orange
             BorderHome.Background = ColorsMenu.OrangeColor;
             BorderHome1.Background = ColorsMenu.OrangeColor;
         }
-
         private void ButtonGlav_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             BorderHome.Background = ColorsMenu.YellowColor;
             BorderHome1.Background = ColorsMenu.YellowColor;
         }
+        #endregion
     }
 }
