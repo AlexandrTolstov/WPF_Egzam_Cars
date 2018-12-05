@@ -165,8 +165,32 @@
       <DependentUpon>MCS.edmx</DependentUpon>
       <LastGenOutput>MCS.cs</LastGenOutput>
     </Content>
-    <Resource Include="Menu_png\Home.png" />
-    <Resource Include="Menu_png\i.png" />
+    <Resource Include="Menu_png\calendar_b.png" />
+    <Resource Include="Menu_png\calendar_g.png" />
+    <Resource Include="Menu_png\CAR_B.png" />
+    <Resource Include="Menu_png\CAR_G.png" />
+    <Resource Include="Menu_png\clock_b.png" />
+    <Resource Include="Menu_png\clock_g.png" />
+    <Resource Include="Menu_png\Cogs_b.png" />
+    <Resource Include="Menu_png\Cogs_g.png" />
+    <Resource Include="Menu_png\drop_b.png" />
+    <Resource Include="Menu_png\drop_g.png" />
+    <Resource Include="Menu_png\graph_b.png" />
+    <Resource Include="Menu_png\graph_g.png" />
+    <Resource Include="Menu_png\Home_b.png" />
+    <Resource Include="Menu_png\Home_g.png" />
+    <Resource Include="Menu_png\information_b.png" />
+    <Resource Include="Menu_png\information_g.png" />
+    <Resource Include="Menu_png\key_b.png" />
+    <Resource Include="Menu_png\key_g.png" />
+    <Resource Include="Menu_png\magic wand_b.png" />
+    <Resource Include="Menu_png\magic wand_g.png" />
+    <Resource Include="Menu_png\paper_b.png" />
+    <Resource Include="Menu_png\paper_g.png" />
+    <Resource Include="Menu_png\people_b.png" />
+    <Resource Include="Menu_png\people_g.png" />
+    <Resource Include="Menu_png\world_b.png" />
+    <Resource Include="Menu_png\world_g.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

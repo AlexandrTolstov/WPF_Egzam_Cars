@@ -52,10 +52,9 @@
                 </Grid.ColumnDefinitions>
                 <Border x:Name="BorderHome" Grid.Column="0" Style="{StaticResource darkBorderStyle}"></Border>
                 <Image x:Name="ImageHome" Grid.Column="0" 
-                       Source="Menu_png\Home.png"
+                       Source="Menu_png\Home_g.png"
                        Width="20"
-                       Height="20"
-                       ></Image>
+                       Height="20"></Image>
                 <Button Grid.Column="1" x:Name="ButtonGlav" Style="{StaticResource darkButtonStyle}" 
                         MouseEnter="ButtonGlav_MouseEnter"
                         MouseLeave="ButtonGlav_MouseLeave"
@@ -63,9 +62,27 @@
                         PreviewMouseLeftButtonUp="ButtonGlav_PreviewMouseLeftButtonUp">Главная</Button>
                 <Border x:Name="BorderHome1" Grid.Column="2" Style="{StaticResource darkBorderStyle}"></Border>
             </Grid>
-            
-            
-            <Button x:Name="ButtonOtlRab" Style="{StaticResource darkButtonStyle}">Отложенные работы</Button>
+
+            <!--Отложенные работы-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="BorderOtlRab" Grid.Column="0" Style="{StaticResource darkBorderStyle}"></Border>
+                <Image x:Name="ImageOtlRab" Grid.Column="0" 
+                       Source="Menu_png\information_g.png"
+                       Width="20"
+                       Height="20"></Image>
+                <Button Grid.Column="1" x:Name="ButtonOtlRab" Style="{StaticResource darkButtonStyle}" 
+                        MouseEnter="ButtonOtlRab_MouseEnter"
+                        MouseLeave="ButtonOtlRab_MouseLeave"
+                        PreviewMouseLeftButtonDown="ButtonOtlRab_PreviewMouseLeftButtonDown"
+                        PreviewMouseLeftButtonUp="ButtonOtlRab_PreviewMouseLeftButtonUp">Отложенные работы</Button>
+                <Border x:Name="BorderOtlRab1" Grid.Column="2" Style="{StaticResource darkBorderStyle}"></Border>
+            </Grid>
+
             <Button x:Name="ButtonVipRab" Style="{StaticResource darkButtonStyle}">Выполненные работы</Button>
             <Button x:Name="ButtonAgreg" Style="{StaticResource darkButtonStyle}">Агрегаты</Button>
             <Button x:Name="ButtonMotochas" Style="{StaticResource darkButtonStyle}">Моточасы</Button>
