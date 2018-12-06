@@ -107,6 +107,11 @@
     <Compile Include="DAL\TablesModel.cs">
       <DependentUpon>MCS.tt</DependentUpon>
     </Compile>
+    <Compile Include="Locazation\LeftMenu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeftMenu.resx</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -142,6 +147,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Locazation\LeftMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LeftMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locazation\LeftMenu.en-US.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

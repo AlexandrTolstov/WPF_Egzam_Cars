@@ -21,14 +21,14 @@
     <DockPanel>
         <!--Верхнее меню-->
         <Grid DockPanel.Dock="Top"
-              Height="30"
-              ShowGridLines="True">
+              Height="30">
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*"></ColumnDefinition>
                  <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Background="Black"></Label>
-            <ComboBox Grid.Column="1" Style="{StaticResource darkComboBoxStyle}">
+            <ComboBox Grid.Column="1" Style="{StaticResource darkComboBoxStyle}"
+                      SelectionChanged="ComboBox_SelectionChanged">
                 <ComboBoxItem Style="{StaticResource darkComboItemStyle}" IsSelected="True">Русский</ComboBoxItem>
                 <ComboBoxItem Style="{StaticResource darkComboItemStyle}">English</ComboBoxItem>
             </ComboBox>
@@ -55,7 +55,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Главная"></TextBlock>
+                    <TextBlock x:Name="TextBlockGlav" Margin="10 0 0 0" Text="Главная"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -74,7 +74,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Отложенные работы"></TextBlock>
+                    <TextBlock x:Name="TextBlockOtlRab" Margin="10 0 0 0" Text="Отложенные работы"></TextBlock>
                 </DockPanel>
             </Button>
 

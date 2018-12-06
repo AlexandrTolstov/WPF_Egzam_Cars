@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Egzam_Cars.DAL;
+using WPF_Egzam_Cars.Locazation;
 
 namespace WPF_Egzam_Cars
 {
@@ -24,11 +28,26 @@ namespace WPF_Egzam_Cars
         public static SolidColorBrush GrayColor = new SolidColorBrush(Color.FromRgb(61, 61, 61));
         public static SolidColorBrush OrangeColor = new SolidColorBrush(Color.FromRgb(255, 128, 0));
     }
+
     public partial class MainWindow : Window
     {
+        public void UpdateUI()
+        {
+            TextBlockGlav.Text = LeftMenu.Main;
+            TextBlockOtlRab.Text = LeftMenu.DeferredWork;
+        }
+
+        public void UpdateLocalization(string lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+        }
         public MainWindow()
         {
             InitializeComponent();
+
+            UpdateLocalization("ru");
+
+            UpdateUI();
         }
 
         #region Кнопка Главное - смена иконок
@@ -212,5 +231,31 @@ namespace WPF_Egzam_Cars
             ImageArrReports.Source = new BitmapImage(new Uri(@"Menu_png\Arr_empt.png", UriKind.RelativeOrAbsolute));
         }
         #endregion
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                ComboBox comboBox = (ComboBox)sender;
+                ComboBoxItem selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+
+                string Lang = selectedItem.Content.ToString();
+
+                if (Lang == "Русский")
+                {
+                    UpdateLocalization("ru");
+                    UpdateUI();
+                }
+                else
+                {
+                    UpdateLocalization("en-US");
+                    UpdateUI();
+                }
+            }
+            catch (Exception)
+            {
+                UpdateLocalization("ru");
+            }
+        }
     }
 }
