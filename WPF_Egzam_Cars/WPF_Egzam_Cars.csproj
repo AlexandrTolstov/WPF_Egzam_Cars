@@ -111,11 +111,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Resource\BorderMenu.xaml">
+    <Page Include="Resource\ButtonImageMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resource\ButtonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\TopBarComboStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +169,8 @@
       <DependentUpon>MCS.edmx</DependentUpon>
       <LastGenOutput>MCS.cs</LastGenOutput>
     </Content>
+    <Resource Include="Menu_png\Arr_empt.png" />
+    <Resource Include="Menu_png\Arr.png" />
     <Resource Include="Menu_png\calendar_b.png" />
     <Resource Include="Menu_png\calendar_g.png" />
     <Resource Include="Menu_png\CAR_B.png" />
@@ -183,8 +189,8 @@
     <Resource Include="Menu_png\information_g.png" />
     <Resource Include="Menu_png\key_b.png" />
     <Resource Include="Menu_png\key_g.png" />
-    <Resource Include="Menu_png\magic wand_b.png" />
-    <Resource Include="Menu_png\magic wand_g.png" />
+    <Resource Include="Menu_png\magic_wand_b.png" />
+    <Resource Include="Menu_png\magic_wand_g.png" />
     <Resource Include="Menu_png\paper_b.png" />
     <Resource Include="Menu_png\paper_g.png" />
     <Resource Include="Menu_png\people_b.png" />

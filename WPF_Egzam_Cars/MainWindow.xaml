@@ -11,7 +11,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource/ButtonMenu.xaml"/>
-                <ResourceDictionary Source="/Resource/BorderMenu.xaml"/>
+                <ResourceDictionary Source="/Resource/ButtonImageMenu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -41,59 +41,256 @@
         <!--Левое меню-->
         <StackPanel DockPanel.Dock="Left" 
                     Width="250"
-                    Orientation="Vertical">
+                    Orientation="Vertical"
+                    Background="#3d3d3d">
 
             <!--Кнопка Главная-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition Width="20"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Border x:Name="BorderHome" Grid.Column="0" Style="{StaticResource darkBorderStyle}"></Border>
-                <Image x:Name="ImageHome" Grid.Column="0" 
-                       Source="Menu_png\Home_g.png"
-                       Width="20"
-                       Height="20"></Image>
-                <Button Grid.Column="1" x:Name="ButtonGlav" Style="{StaticResource darkButtonStyle}" 
-                        MouseEnter="ButtonGlav_MouseEnter"
-                        MouseLeave="ButtonGlav_MouseLeave"
-                        PreviewMouseLeftButtonDown="ButtonGlav_PreviewMouseLeftButtonDown"
-                        PreviewMouseLeftButtonUp="ButtonGlav_PreviewMouseLeftButtonUp">Главная</Button>
-                <Border x:Name="BorderHome1" Grid.Column="2" Style="{StaticResource darkBorderStyle}"></Border>
-            </Grid>
+            <Button Grid.Column="1" 
+                    x:Name="ButtonGlav" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonGlav_MouseEnter"
+                    MouseLeave="ButtonGlav_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageHome" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left" 
+                           Source="Menu_png/Home_g.png"></Image>
+                    <Image x:Name="ImageArrHome" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Главная"></TextBlock>
+                </DockPanel>
+            </Button>
 
-            <!--Отложенные работы-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition Width="20"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Border x:Name="BorderOtlRab" Grid.Column="0" Style="{StaticResource darkBorderStyle}"></Border>
-                <Image x:Name="ImageOtlRab" Grid.Column="0" 
-                       Source="Menu_png\information_g.png"
-                       Width="20"
-                       Height="20"></Image>
-                <Button Grid.Column="1" x:Name="ButtonOtlRab" Style="{StaticResource darkButtonStyle}" 
-                        MouseEnter="ButtonOtlRab_MouseEnter"
-                        MouseLeave="ButtonOtlRab_MouseLeave"
-                        PreviewMouseLeftButtonDown="ButtonOtlRab_PreviewMouseLeftButtonDown"
-                        PreviewMouseLeftButtonUp="ButtonOtlRab_PreviewMouseLeftButtonUp">Отложенные работы</Button>
-                <Border x:Name="BorderOtlRab1" Grid.Column="2" Style="{StaticResource darkBorderStyle}"></Border>
-            </Grid>
+            <!--Кнопка Отложенные работы-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonOtlRab" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonOtlRab_MouseEnter"
+                    MouseLeave="ButtonOtlRab_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageOtlRab" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left" 
+                           Source="Menu_png/information_g.png"></Image>
+                    <Image x:Name="ImageArrOtlRab"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Отложенные работы"></TextBlock>
+                </DockPanel>
+            </Button>
 
-            <Button x:Name="ButtonVipRab" Style="{StaticResource darkButtonStyle}">Выполненные работы</Button>
-            <Button x:Name="ButtonAgreg" Style="{StaticResource darkButtonStyle}">Агрегаты</Button>
-            <Button x:Name="ButtonMotochas" Style="{StaticResource darkButtonStyle}">Моточасы</Button>
-            <Button x:Name="ButtonRashMat" Style="{StaticResource darkButtonStyle}">Расходные материалы</Button>
-            <Button x:Name="ButtonPlanir" Style="{StaticResource darkButtonStyle}">Планирование</Button>
-            <Button x:Name="ButtonProect" Style="{StaticResource darkButtonStyle}">Проект</Button>
-            <Button x:Name="ButtonSpisMash" Style="{StaticResource darkButtonStyle}">Список машин</Button>
-            <Button x:Name="ButtonSpravoch" Style="{StaticResource darkButtonStyle}">Справочник</Button>
-            <Button x:Name="ButtonDostup" Style="{StaticResource darkButtonStyle}">Доступы</Button>
-            <Button x:Name="ButtonCheck" Style="{StaticResource darkButtonStyle}">Checklist</Button>
-            <Button x:Name="ButtonOtchet" Style="{StaticResource darkButtonStyle}">Отчеты</Button>
+            <!--Кнопка Выполненные работы-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonVipRab" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonVipRab_MouseEnter"
+                    MouseLeave="ButtonVipRab_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageVipRab" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/key_g.png"></Image>
+                    <Image x:Name="ImageArrVipRab"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Выполненные работы"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Агрегаты-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonAgreg" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonAgreg_MouseEnter"
+                    MouseLeave="ButtonAgreg_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageAgreg" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/Cogs_g.png"></Image>
+                    <Image x:Name="ImageArrAgreg"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Агрегат"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Агрегаты-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonMotochas" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonMotochas_MouseEnter"
+                    MouseLeave="ButtonMotochas_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageMotochas" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/clock_g.png"></Image>
+                    <Image x:Name="ImageArrMotochas"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Моточасы"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Расходные материалы-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonRashMat" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonRashMat_MouseEnter"
+                    MouseLeave="ButtonRashMat_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageRashMat" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/drop_g.png"></Image>
+                    <Image x:Name="ImageArrRashMat"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Расходные материалы"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Планирование-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonPlan" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonPlan_MouseEnter"
+                    MouseLeave="ButtonPlan_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImagePlan" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/calendar_g.png"></Image>
+                    <Image x:Name="ImageArrPlan"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Планирование"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Проект-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonProect" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonProect_MouseEnter"
+                    MouseLeave="ButtonProect_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageProect" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/world_g.png"></Image>
+                    <Image x:Name="ImageArrProect"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Проект"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Список машин-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonListOfCars" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonListOfCars_MouseEnter"
+                    MouseLeave="ButtonListOfCars_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageListOfCars" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/CAR_G.png"></Image>
+                    <Image x:Name="ImageArrListOfCars"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Список машин"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Кнопка Справочники-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonSprav" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonSprav_MouseEnter"
+                    MouseLeave="ButtonSprav_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageSprav" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/graph_g.png"></Image>
+                    <Image x:Name="ImageArrSprav"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Справочники"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Доступы-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonDost" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonDost_MouseEnter"
+                    MouseLeave="ButtonDost_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageDost" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/people_g.png"></Image>
+                    <Image x:Name="ImageArrDost"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Доступы"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Checklist-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonCheck" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonCheck_MouseEnter"
+                    MouseLeave="ButtonCheck_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageCheck" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/magic_wand_g.png"></Image>
+                    <Image x:Name="ImageArrCheck"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Checklist"></TextBlock>
+                </DockPanel>
+            </Button>
+
+            <!--Отчеты-->
+            <Button Grid.Column="1" 
+                    x:Name="ButtonReports" 
+                    Style="{StaticResource darkButtonStyle}"
+                    MouseEnter="ButtonReports_MouseEnter"
+                    MouseLeave="ButtonReports_MouseLeave">
+                <DockPanel>
+                    <Image x:Name="ImageReports" 
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Left"
+                           Source="Menu_png/paper_g.png"></Image>
+                    <Image x:Name="ImageArrReports"
+                           Style="{StaticResource StyleImage}"
+                           DockPanel.Dock="Right" 
+                           Source="Menu_png/Arr_empt.png"></Image>
+                    <TextBlock Margin="10 0 0 0" Text="Отчеты"></TextBlock>
+                </DockPanel>
+            </Button>
+
         </StackPanel>
 
         <!--Центральная часть-->
