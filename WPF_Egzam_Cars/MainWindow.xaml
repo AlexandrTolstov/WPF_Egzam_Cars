@@ -12,6 +12,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Resource/ButtonMenu.xaml"/>
                 <ResourceDictionary Source="/Resource/ButtonImageMenu.xaml"/>
+                <ResourceDictionary Source="/Resource/TopBarComboStyle.xaml"/>
+                <ResourceDictionary Source="/Resource/TopBarComboItemStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -19,22 +21,16 @@
     <DockPanel>
         <!--Верхнее меню-->
         <Grid DockPanel.Dock="Top"
-              Height="50"
+              Height="30"
               ShowGridLines="True">
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*"></ColumnDefinition>
-                 <ColumnDefinition Width="100"></ColumnDefinition>
+                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Background="Black"></Label>
-            <ComboBox Grid.Column="1" 
-                      Background="Black"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      Width="100"
-                      Height="50"
-                      FontSize="16">
-                <ComboBoxItem IsSelected="True">Русский</ComboBoxItem>
-                <ComboBoxItem>English</ComboBoxItem>
+            <ComboBox Grid.Column="1" Style="{StaticResource darkComboBoxStyle}">
+                <ComboBoxItem Style="{StaticResource darkComboItemStyle}" IsSelected="True">Русский</ComboBoxItem>
+                <ComboBoxItem Style="{StaticResource darkComboItemStyle}">English</ComboBoxItem>
             </ComboBox>
         </Grid>
 
