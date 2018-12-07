@@ -21,13 +21,19 @@
     <DockPanel>
         <!--Верхнее меню-->
         <Grid DockPanel.Dock="Top"
-              Height="30">
+              Height="30"
+              Background="Black">
             <Grid.ColumnDefinitions>
                  <ColumnDefinition Width="*"></ColumnDefinition>
+                 <ColumnDefinition Width="40"></ColumnDefinition>
                  <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Background="Black"></Label>
-            <ComboBox Grid.Column="1" Style="{StaticResource darkComboBoxStyle}"
+            <Image x:Name="ImageFlag"
+                   Grid.Column="1" 
+                   Source="Bar_png/ruFlag.png"
+                    Height="20"></Image>
+            <ComboBox Grid.Column="2" Style="{StaticResource darkComboBoxStyle}"
                       SelectionChanged="ComboBox_SelectionChanged">
                 <ComboBoxItem Style="{StaticResource darkComboItemStyle}" IsSelected="True">Русский</ComboBoxItem>
                 <ComboBoxItem Style="{StaticResource darkComboItemStyle}">English</ComboBoxItem>

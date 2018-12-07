@@ -173,6 +173,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Bar_png\ruFlag.png" />
+    <Resource Include="Bar_png\usFlag.png" />
     <Content Include="DAL\MCS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MCS.Context.cs</LastGenOutput>

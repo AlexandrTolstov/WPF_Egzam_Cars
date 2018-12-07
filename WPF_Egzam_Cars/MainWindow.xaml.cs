@@ -243,6 +243,7 @@ namespace WPF_Egzam_Cars
         }
         #endregion
 
+        //Событие выбора языка
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -254,11 +255,13 @@ namespace WPF_Egzam_Cars
 
                 if (Lang == "Русский")
                 {
+                    ImageFlag.Source = new BitmapImage(new Uri(@"Bar_png\ruFlag.png", UriKind.RelativeOrAbsolute));
                     UpdateLocalization("ru");
                     UpdateUI();
                 }
                 else
                 {
+                    ImageFlag.Source = new BitmapImage(new Uri(@"Bar_png\usFlag.png", UriKind.RelativeOrAbsolute));
                     UpdateLocalization("en-US");
                     UpdateUI();
                 }
