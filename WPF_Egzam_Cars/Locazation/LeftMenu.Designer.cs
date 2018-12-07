@@ -61,6 +61,42 @@ namespace WPF_Egzam_Cars.Locazation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Доступы.
+        /// </summary>
+        internal static string Accesses {
+            get {
+                return ResourceManager.GetString("Accesses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checklist.
+        /// </summary>
+        internal static string Checklist {
+            get {
+                return ResourceManager.GetString("Checklist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выполненные работы.
+        /// </summary>
+        internal static string CompletedWork {
+            get {
+                return ResourceManager.GetString("CompletedWork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Расходные материалы.
+        /// </summary>
+        internal static string Consumables {
+            get {
+                return ResourceManager.GetString("Consumables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Отложенные работы.
         /// </summary>
         internal static string DeferredWork {
@@ -70,11 +106,74 @@ namespace WPF_Egzam_Cars.Locazation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Справочники.
+        /// </summary>
+        internal static string Directories {
+            get {
+                return ResourceManager.GetString("Directories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Моточасы.
+        /// </summary>
+        internal static string EngineHours {
+            get {
+                return ResourceManager.GetString("EngineHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Список машин.
+        /// </summary>
+        internal static string MachineList {
+            get {
+                return ResourceManager.GetString("MachineList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Главная.
         /// </summary>
         internal static string Main {
             get {
                 return ResourceManager.GetString("Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Планирование.
+        /// </summary>
+        internal static string Planning {
+            get {
+                return ResourceManager.GetString("Planning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Проект.
+        /// </summary>
+        internal static string Project {
+            get {
+                return ResourceManager.GetString("Project", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отчеты.
+        /// </summary>
+        internal static string Reports {
+            get {
+                return ResourceManager.GetString("Reports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Агрегат.
+        /// </summary>
+        internal static string Unit {
+            get {
+                return ResourceManager.GetString("Unit", resourceCulture);
             }
         }
     }

@@ -35,6 +35,17 @@ namespace WPF_Egzam_Cars
         {
             TextBlockGlav.Text = LeftMenu.Main;
             TextBlockOtlRab.Text = LeftMenu.DeferredWork;
+            TextBlockVipRab.Text = LeftMenu.CompletedWork;
+            TextBlockAgreg.Text = LeftMenu.Unit;
+            TextBlockMotoHaur.Text = LeftMenu.EngineHours;
+            TextBlockRashMat.Text = LeftMenu.Consumables;
+            TextBlockPlan.Text = LeftMenu.Planning;
+            TextBlockProject.Text = LeftMenu.Project;
+            TextBlockListOfCars.Text = LeftMenu.MachineList;
+            TextBlockSprav.Text = LeftMenu.Directories;
+            TextBlockDost.Text = LeftMenu.Accesses;
+            TextBoxCheck.Text = LeftMenu.Checklist;
+            TextBoxReports.Text = LeftMenu.Reports;
         }
 
         public void UpdateLocalization(string lang)

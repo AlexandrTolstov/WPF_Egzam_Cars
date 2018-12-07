@@ -93,7 +93,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Выполненные работы"></TextBlock>
+                    <TextBlock x:Name="TextBlockVipRab" Margin="10 0 0 0" Text="Выполненные работы"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -112,11 +112,11 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Агрегат"></TextBlock>
+                    <TextBlock x:Name="TextBlockAgreg" Margin="10 0 0 0" Text="Агрегат"></TextBlock>
                 </DockPanel>
             </Button>
 
-            <!--Кнопка Агрегаты-->
+            <!--Кнопка Моточасы-->
             <Button Grid.Column="1" 
                     x:Name="ButtonMotochas" 
                     Style="{StaticResource darkButtonStyle}"
@@ -131,7 +131,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Моточасы"></TextBlock>
+                    <TextBlock x:Name="TextBlockMotoHaur" Margin="10 0 0 0" Text="Моточасы"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -150,7 +150,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Расходные материалы"></TextBlock>
+                    <TextBlock x:Name="TextBlockRashMat" Margin="10 0 0 0" Text="Расходные материалы"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -169,7 +169,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Планирование"></TextBlock>
+                    <TextBlock x:Name="TextBlockPlan" Margin="10 0 0 0" Text="Планирование"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -188,7 +188,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Проект"></TextBlock>
+                    <TextBlock x:Name="TextBlockProject" Margin="10 0 0 0" Text="Проект"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -207,7 +207,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Список машин"></TextBlock>
+                    <TextBlock x:Name="TextBlockListOfCars" Margin="10 0 0 0" Text="Список машин"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -226,7 +226,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Справочники"></TextBlock>
+                    <TextBlock x:Name="TextBlockSprav" Margin="10 0 0 0" Text="Справочники"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -245,7 +245,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Доступы"></TextBlock>
+                    <TextBlock x:Name="TextBlockDost" Margin="10 0 0 0" Text="Доступы"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -264,7 +264,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Checklist"></TextBlock>
+                    <TextBlock x:Name="TextBoxCheck" Margin="10 0 0 0" Text="Checklist"></TextBlock>
                 </DockPanel>
             </Button>
 
@@ -283,7 +283,7 @@
                            Style="{StaticResource StyleImage}"
                            DockPanel.Dock="Right" 
                            Source="Menu_png/Arr_empt.png"></Image>
-                    <TextBlock Margin="10 0 0 0" Text="Отчеты"></TextBlock>
+                    <TextBlock x:Name="TextBoxReports" Margin="10 0 0 0" Text="Отчеты"></TextBlock>
                 </DockPanel>
             </Button>
 
